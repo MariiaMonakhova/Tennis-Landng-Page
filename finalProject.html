@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tennis Community</title>
+    <style>
+      body {
+        background: linear-gradient(
+          109.6deg,
+          rgb(148, 233, 194) 11.2%,
+          rgb(224, 235, 186) 91.1%
+        );
+      }
+      h1,
+      h2 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        color: #226b2b;
+      }
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        font-size: 13px;
+        margin: 15px 0 20px;
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+        max-width: 100%;
+      }
+      .author {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      .now {
+        font-weight: 650;
+      }
+      button {
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        margin: 0 auto;
+        line-height: 1.5;
+        padding: 15px 20px;
+        color: #e4efe8;
+        background: #226629;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        border: none;
+        font-size: 18px;
+        border-radius: 15px;
+        transition: all 100ms ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        opacity: 75%;
+      }
+      .read-more {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: #486d6e;
+        margin: 0 0 10px 0;
+        transition: all 200ms ease-in-out;
+      }
+      .read-more:hover {
+        text-decoration: underline;
+      }
+      .room {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="room">
+      <h1>Join our Tennis Community</h1>
+      <h2>and become famous</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/390/original/01tennis-russia-jumbo_1_.jpg?1650545894"
+        width="500x500"
+      />
+      <hr />
+      <p>
+        Love a competitive game of tennis? A friendly social hit? Or are you
+        just learning to play? <br />
+        We offer an extensive range of programs for tennis enthusiasts of all
+        levels, from beginners to pros, adults and kids.
+        <strong> No matter what your age or level of experience</strong>, we
+        make sure the ball is always in your court.
+        <spam class="now">Don't hesitate!</spam>
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/Tennis"
+        target="_blank"
+        class="read-more"
+      >
+        Read more about tennis here</a
+      >
+      <br />
+      <br />
+      <button>▶ <strong>Join now!</strong></button>
+      <p class="author">Coded by <em>Mariia Monakhova</em></p>
+    </div>
+    <script>
+      function joinNow() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let experience = prompt("Have you ever played tennis?");
+        experience = experience.toLowerCase();
+        experience = experience.trim();
+        experience = experience.replace("yeah", "yes");
+        if (experience === "yes") {
+          alert(
+            "Amazing, " + name + "! We will email you as soon as possible!"
+          );
+        } else {
+          alert(
+            "Okay, " +
+              name +
+              "! Our administrator will consult you as soon as possible!"
+          );
+        }
+      }
+      let joinButton = document.querySelector("button");
+      joinButton.addEventListener("click", joinNow);
+    </script>
+  </body>
+</html>
